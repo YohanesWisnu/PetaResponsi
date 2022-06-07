@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Persebaran Tempat Wisata di Semarang</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <style>#map {width:100%; height:600px}</style></style>
+    </head>
+    <body>
+        <div id = "map"></div>
+        <script>
+            var mymap = L.map('map').setView([-6.991045, 110.419425], 12);
+                L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                maxZoom: 17,
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                id: 'mapbox/streets-v11',
+                tileSize: 512,
+                zoomOffset: -1
+            }).addTo(mymap);
+            var marker = L.marker([-7.0077472, 110.419807]).addTo(mymap).bindPopup("Rumah Sakit St. Elisabeth");
+            var marker = L.marker([-7.0011450, 110.428347]).addTo(mymap).bindPopup("Rumah Sakit Roemani Muhammadiyah");
+            var marker = L.marker([-7.0048082, 110.439891]).addTo(mymap).bindPopup("Rumah Bersalin Bhakti Ibu");
+            var marker = L.marker([-7.0003357, 110.446672]).addTo(mymap).bindPopup("Rumah Sakit Permata Medika");
+            var marker = L.marker([-6.9699216, 110.439805]).addTo(mymap).bindPopup("Rumah Sakit Panti Wilasa Citarum");
+            var marker = L.marker([-6.9729886, 110.434913]).addTo(mymap).bindPopup("Rumah Sakit Panti Wilasa");
+            var marker = L.marker([-6.9854697, 110.412855]).addTo(mymap).bindPopup("Rumah Sakit Hermina Pandanaran");
+            var marker = L.marker([-6.9869179, 110.407705]).addTo(mymap).bindPopup("Rumah Sakit Bhakti Wira Tamtama");
+            var marker = L.marker([-6.9935204, 110.408864]).addTo(mymap).bindPopup("RSUP Dr. Kariadi");
+            var marker = L.marker([-7.0000375, 110.342216]).addTo(mymap).bindPopup("Rumah Sakit Permata Medika");
+            var marker = L.marker([-7.0729126, 110.411911]).addTo(mymap).bindPopup("Rumah Sakit Hermina Banyumanik");
+            var marker = L.marker([-7.0637986, 110.416502]).addTo(mymap).bindPopup("Rumah Sakit Banyumanik");
+            var marker = L.marker([-7.0211218, 110.373973]).addTo(mymap).bindPopup("Rumah Sakit Permata Sari");
+        </script>
+    </body>
+</html>
